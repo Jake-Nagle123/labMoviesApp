@@ -7,8 +7,10 @@ import Spinner from "../components/spinner";
 import useFiltering from "../hooks/useFiltering";
 import MovieFilterUI, {
   titleFilter,
-  genreFilter,
+  genreFilter
 } from "../components/movieFilterUI";
+import RemoveFromFavourites from "../components/cardIcons/removeFromFavourites";
+import WriteReview from "../components/cardIcons/writeReview";
 
 const titleFiltering = {
   name: "title",
@@ -54,16 +56,21 @@ const FavouriteMoviesPage: React.FC = () => {
     const updatedFilterSet =
       type === "title" ? [changedFilter, filterValues[1]] : [filterValues[0], changedFilter];
     setFilterValues(updatedFilterSet);
-  };
-
-  const toDo = () => true;
+  }; 
 
   return (
     <>
       <PageTemplate
         title="Favourite Movies"
         movies={displayedMovies}
-        selectFavourite={toDo}
+        action={(movie) => {
+          return (
+            <>
+              <RemoveFromFavourites {...movie} />
+              <WriteReview {...movie} />
+            </>
+          );
+        }}
       />
       <MovieFilterUI
         onFilterValuesChange={changeFilterValues}
