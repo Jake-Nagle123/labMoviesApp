@@ -1,4 +1,4 @@
-// Page updated for - Excercise 1 Lab-Movie_App-Part4
+// Page updated for - Excercise 1 & 3 in Lab-Movie_App-Part4
 // Page Mirroring home page as requested
 import React from "react";
 import PageTemplate from '../components/templateMovieListPage';
@@ -9,7 +9,7 @@ import MovieFilterUI, {
   titleFilter,
   genreFilter
 } from "../components/movieFilterUI";
-import { DiscoverMovies } from "../types/interfaces"; // Looked at link to UpcomingMovies -has all same data as DiscoverMovies(was going to create new interface but can use same)
+import { DiscoverMovies } from "../types/interfaces";
 import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
 import AddToPlaylistIcon from "../components/cardIcons/addToPlaylist";
