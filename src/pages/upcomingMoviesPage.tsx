@@ -1,5 +1,4 @@
 // Page updated for - Excercise 1 & 3 in Lab-Movie_App-Part4
-// Page Mirroring home page as requested
 import React from "react";
 import PageTemplate from '../components/templateMovieListPage';
 import { BaseMovieProps } from "../types/interfaces";
